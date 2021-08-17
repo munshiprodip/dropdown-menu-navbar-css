@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+   background-color:rgb(35, 31, 73);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   width: 80%;
+   margin: 0 auto;
+}
+
+.nav-brand {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.nav-brand a{
+   text-decoration: none;
+   color: #fff;
+   font-size: 30px;
+}
+
+
+.main-menu {
+   text-align: center;
+   display: inline-flex;
+   font-size:20px;
+    
+}
+
+.main-menu  li{
+   position: relative;
+   list-style: none;
+   width: 150px;
+   padding: 15px;
+}
+.main-menu li a{
+   color: #fff;
+   text-decoration: none;
+ }
+
+ .active, .main-menu li:hover{
+    background-color: rgb(230, 33, 33);
+    
+ }
+
+ .sub-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left:0;
+ }
+
+ .sub-menu ul{
+    text-align: left;
+    display: block;
+ }
+ .sub-menu ul li{
+   border-bottom: 1px dotted #ddd;
+}
+
+.sub-menu ul li:last-child{
+   border-bottom: none;
+}
+
+
+ .main-menu  li:hover> .sub-menu{
+    display: block;
+    background-color:rgb(35, 31, 73);
+ }
+
+
+ .has-sub-menu .sub-menu{
+   left: 100%;
+   top:0;
+}
+
+ .has-sub-menu .show-left{
+   left: -100%;
+}
+
+
+.pull-right{
+   float: right;
+}
+
+/* extra */
+.has-sub-menu::after{
+   content: "";
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   width: 10px;
+   height: 10px;
+   border:3px solid rgb(132, 0, 255);
+   border-radius: 50%;
+   transform: translateY(-50%);
+
+}
+
+
+
